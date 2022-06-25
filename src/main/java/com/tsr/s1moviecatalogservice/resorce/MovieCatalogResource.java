@@ -30,7 +30,7 @@ public class MovieCatalogResource {
 		System.out.println("JAVA_HOME Value:- " + System.getenv("JAVA_HOME"));
 		System.out.println("RANA_HOME Value:- " + System.getenv("RANA_HOME"));
 		
-		UserRating ratings = restTemplate.getForObject("http://s3-rating-data-service:8083/ratingsdata/users/"+userId, UserRating.class);
+		UserRating ratings = restTemplate.getForObject("http://s3-rateing-data-service:8083/ratingsdata/users/"+userId, UserRating.class);
 		//UserRating ratings = restTemplate.getForObject("http://localhost:8083/ratingsdata/users/"+userId, UserRating.class);
 		
 		return ratings.getUserRating().stream().map(rating -> {
